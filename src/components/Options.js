@@ -1,6 +1,9 @@
 import React from "react";
+import { useQuiz } from "../context/QuizContext";
 
-function Options({ question, answer, dispatch }) {
+function Options({ question }) {
+  const { answer, dispatch } = useQuiz();
+
   const hasAnswered = answer !== null;
 
   return (
